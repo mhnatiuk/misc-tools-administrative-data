@@ -5,6 +5,8 @@ from sys import argv
 """
 The aim of this little, but handy tool is to help a user that wants to map a polish zipcode to the name of a voivodship ( a polenglish name for a county).
 MIT license applies (so feel free to do wtf you want with this)
+The data about mapping between zipcodes and voivodships:
+http://pl.wikisource.org/wiki/Kody_pocztowe_-_zredukowane_mapowanie_kod_-_wojew%C3%B3dztwo
 """
 
 
