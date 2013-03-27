@@ -19,13 +19,11 @@ And matches the FIRST regex spotted. So the sorting of a map file should begin w
 """
 def get_voiv(zipcode, mapping):
 	voivodship = "unmatched"
-	print zipcode
 	for regex in list(mapping):
 		regex_str = re.sub('\*','[0-9]', regex)
 		reg = re.compile(regex_str)
 		if reg.match(zipcode):
 			voivodship = mapping[regex]
-			print "{} - {} - {}".format(zipcode, regex, voivodship)
 			return voivodship
 	return voivodship
 """
@@ -55,7 +53,7 @@ def map_zipcodes(filename, which_column):
 	reader = csv.reader(fileh, delimiter=";")
 	for row in reader:
 		row.append(get_voiv(row[which_column], mapping))
-		print row
+		print ";".join(row)
 
 """
 Starts it up.
